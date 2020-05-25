@@ -104,7 +104,7 @@ export default function ContactTable({
                       })}
                       <TableCell>
                         <i
-                          class="fas fa-info"
+                          className="fas fa-info"
                           onClick={() => {
                             setCurrentEmployee(employee);
                             setShowSingleContact(true);
@@ -116,7 +116,7 @@ export default function ContactTable({
                       </TableCell>
                       <TableCell>
                         <i
-                          class="fas fa-user-edit"
+                          className="fas fa-user-edit"
                           onClick={() => {
                             setCurrentEmployee(employee);
                             setShowEditContact(true);
@@ -128,7 +128,7 @@ export default function ContactTable({
                       </TableCell>
                       <TableCell>
                         <i
-                          class="far fa-trash-alt"
+                          className="far fa-trash-alt"
                           onClick={() => deleteEmployee(employee.id)}
                           style={{
                             cursor: "pointer",

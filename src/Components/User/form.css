@@ -1,3 +1,16 @@
 .form-group {
   margin-bottom: 0rem;
 }
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

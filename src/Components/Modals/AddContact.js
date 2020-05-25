@@ -46,9 +46,7 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
       email === "" ||
       phonenumber === "" ||
       role === "" ||
-      streetnumber === "" ||
-      state === "" ||
-      city === ""
+      streetnumber === ""
     ) {
       setWarning(true);
     } else {

@@ -4,66 +4,31 @@ import ContactTable from "./ContactTable";
 import Actions from "./Actions";
 
 const Dashboard = () => {
+  const employeeData = localStorage.getItem("employees");
   const [states, setStates] = useState([]);
+  const [employees, setEmployees] = useState(
+    employeeData ? JSON.parse(employeeData) : []
+  );
+  const [filter, setFilter] = useState("");
+  const [filteredEmployees, setFilteredEmployees] = useState(employees);
 
   useEffect(() => {
     fetch("http://locationsng-api.herokuapp.com/api/v1/lgas")
       .then((res) => res.json())
       .then((res) => {
         setStates(res);
+        const employeeData = localStorage.getItem("employees");
+        if (employeeData) {
+          setEmployees(JSON.parse(employeeData));
+        }
       })
       .catch((err) => console.log(err));
   }, []);
 
-  const [employees, setEmployees] = useState([
-    {
-      firstname: "Timi",
-      lastname: "Timi",
-      email: "Timi",
-      phonenumber: "000",
-      role: "Developer",
-      streetnumber: "0",
-      state: "Lagos",
-      city: "Ikorodu",
-      id: 1,
-    },
-    {
-      firstname: "Chima",
-      lastname: "Timi",
-      email: "bisi@gmail.com",
-      phonenumber: "000",
-      role: "Timi",
-      streetnumber: "0",
-      state: "Anambra",
-      city: "Ikorodu",
-      id: 1,
-    },
-    {
-      firstname: "Timi",
-      lastname: "Timi",
-      email: "Timi",
-      phonenumber: "000",
-      role: "Developer",
-      streetnumber: "0",
-      state: "Lagos",
-      city: "Ikorodu",
-      id: 1,
-    },
-    {
-      firstname: "Timi",
-      lastname: "Timi",
-      email: "Timi",
-      phonenumber: "000",
-      role: "Timi",
-      streetnumber: "0",
-      state: "Anambra",
-      city: "Ikorodu",
-      id: 1,
-    },
-  ]);
-
-  const [filter, setFilter] = useState("");
-  const [filteredEmployees, setFilteredEmployees] = useState(employees);
+  useEffect(() => {
+    localStorage.setItem("employees", JSON.stringify(employees));
+    setFilteredEmployees(employees);
+  }, [employees]);
 
   const handleSearchChange = (e) => {
     let filterCondition;

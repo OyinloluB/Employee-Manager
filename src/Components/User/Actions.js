@@ -33,13 +33,7 @@ const Actions = ({
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav
-              className="mr-auto"
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
+            <Nav className="mr-auto search">
               <Search handleSearchChange={handleSearchChange} />
               &nbsp;
               <FilterSelect setFilter={setFilter} />
@@ -55,7 +49,7 @@ const Actions = ({
               }}
             >
               <i
-                class="fas fa-user-plus"
+                className="fas fa-user-plus"
                 style={{
                   color: "#5064cc",
                 }}

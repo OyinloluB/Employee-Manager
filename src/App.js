@@ -7,6 +7,7 @@ import { ProtectedRoute } from "./routes";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const employeeData = localStorage.getItem("employees");
 
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
         />
         <ProtectedRoute
           isAuthenticated={isAuthenticated}
+          employeeData={employeeData}
           exact
           paths={["/", "/dashboard"]}
           component={Dashboard}
