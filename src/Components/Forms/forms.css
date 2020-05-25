@@ -1,0 +1,9 @@
+#paper {
+  background-color: #5064cc;
+}
+
+@media screen and (max-width: 420px) {
+  #paper {
+    display: none;
+  }
+}

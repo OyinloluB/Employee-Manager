@@ -1,0 +1,21 @@
+.table-responsive {
+  padding: 0px 50px;
+}
+.bg-light {
+  padding: 10px 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .table-responsive {
+    padding: 0px;
+  }
+  .navbar {
+    padding: 0rem !important;
+  }
+  .flexActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3vh;
+  }
+}
