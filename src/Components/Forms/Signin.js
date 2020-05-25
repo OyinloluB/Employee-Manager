@@ -35,7 +35,7 @@ export default function Signin({ setIsAuthenticated }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === "" || password === "") {
+    if (email === "" || password.length < 7) {
       setErrorExists(true);
     } else {
       setErrorExists(false);
@@ -81,6 +81,7 @@ export default function Signin({ setIsAuthenticated }) {
           label="Email"
           value={email}
           onChange={handleChange}
+          required
         />
         <TextField
           id="password"
@@ -88,6 +89,7 @@ export default function Signin({ setIsAuthenticated }) {
           label="Password"
           value={password}
           onChange={handleChange}
+          required
         />
         <Button
           variant="outlined"

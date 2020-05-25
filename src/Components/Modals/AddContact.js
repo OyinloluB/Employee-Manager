@@ -20,8 +20,6 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
     phonenumber,
     role,
     streetnumber,
-    state,
-    city,
   } = formDetails;
 
   const [warning, setWarning] = useState(false);
@@ -93,6 +91,7 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
                 type="text"
                 name="firstname"
                 onChange={handleChange}
+                required
               />
             </Col>
             <Col>
@@ -101,6 +100,7 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
                 type="text"
                 name="lastname"
                 onChange={handleChange}
+                required
               />
             </Col>
           </Row>
@@ -112,6 +112,7 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
                 type="email"
                 name="email"
                 onChange={handleChange}
+                required
               />
             </Col>
             <Col>
@@ -120,6 +121,7 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
                 type="number"
                 name="phonenumber"
                 onChange={handleChange}
+                required
               />
             </Col>
           </Row>
@@ -131,6 +133,7 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
                 type="text"
                 name="role"
                 onChange={handleChange}
+                required
               />
             </Col>
             <Col>
@@ -139,6 +142,7 @@ const AddContact = ({ show, setShow, states, setEmployees, employees }) => {
                 type="number"
                 name="streetnumber"
                 onChange={handleChange}
+                required
               />
             </Col>
           </Row>

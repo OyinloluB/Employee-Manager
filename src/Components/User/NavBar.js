@@ -20,16 +20,6 @@ export const NavBar = () => {
             height="70"
             className="d-inline-block align-top"
           />{" "}
-          <h6>
-            Hello,{" "}
-            <span
-              style={{
-                color: "#52F1EC",
-              }}
-            >
-              John Doe
-            </span>
-          </h6>
         </Navbar.Brand>
       </Navbar>
     </>

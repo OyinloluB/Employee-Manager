@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, Button } from "react-bootstrap";
 import AddContact from "../Modals/AddContact";
 import Search from "./Search";
 import FilterSelect from "./FilterSelect";
@@ -48,13 +48,7 @@ const Actions = ({
                 marginTop: "3vh",
               }}
             >
-              <i
-                className="fas fa-user-plus"
-                style={{
-                  color: "#5064cc",
-                }}
-                onClick={() => setShow(true)}
-              ></i>
+              <Button onClick={() => setShow(true)}>Add Contact</Button>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -6,8 +6,7 @@ import Signin from "./Components/Forms/Signin";
 import { ProtectedRoute } from "./routes";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
-  const employeeData = localStorage.getItem("employees");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <BrowserRouter>
@@ -19,7 +18,6 @@ function App() {
         />
         <ProtectedRoute
           isAuthenticated={isAuthenticated}
-          employeeData={employeeData}
           exact
           paths={["/", "/dashboard"]}
           component={Dashboard}
