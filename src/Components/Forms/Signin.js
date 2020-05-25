@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
       margin: theme.spacing(1),
-      width: "40ch",
+      width: "30ch",
     },
     text: {
       textAlign: "center",
@@ -97,7 +97,7 @@ export default function Signin({ setIsAuthenticated }) {
           style={{
             border: "1px solid #52F1EC",
             color: "#52F1EC",
-            width: "40ch",
+            width: "30ch",
             marginTop: "5vh",
           }}
         >
